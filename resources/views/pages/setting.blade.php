@@ -57,7 +57,7 @@
                     wire:loading.attr="disabled" 
                     wire:loading.class="!bg-primary-200" 
                     wire:target="save" wire:click="save" 
-                    class="{{ $buttonClass }}">
+                    class="{{ $buttonClass }} mt-2">
                    {{ __('filament-dynamic-settings-page::settings-resource.save.button') }}
                 </button>
             </div>

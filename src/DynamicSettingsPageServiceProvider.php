@@ -26,7 +26,7 @@ class DynamicSettingsPageServiceProvider extends PluginServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('ibrahim-bedir/filament-dynamic-setting-page');
+                    ->askToStarRepoOnGitHub('ibrahim-bedir/filament-dynamic-settings-page');
             })
             ->hasViews();
     }
