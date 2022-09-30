@@ -42,9 +42,6 @@ You can publish the config file and migrations with:
         ]
     ];
 ```
-## License
-
-The MIT License (MIT). Please see License File for more information.
 ## Lisans
 
 The MIT License [MIT](https://choosealicense.com/licenses/mit/). Please see License File for more information.
