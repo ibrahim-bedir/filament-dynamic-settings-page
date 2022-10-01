@@ -1,16 +1,13 @@
 <?php
-
 namespace IbrahimBedir\FilamentDynamicSettingsPage;
 
-use Filament\FilamentManager;
 use Filament\PluginServiceProvider;
-use IbrahimBedir\FilamentDynamicSettingsPage\Pages\Setting;
+use IbrahimBedir\FilamentDynamicSettingsPage\Pages\SettingPage;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 
 class DynamicSettingsPageServiceProvider extends PluginServiceProvider
 {
-
     public static string $name = 'filament-dynamic-settings-page';
 
     public function configurePackage(Package $package): void
@@ -31,10 +28,10 @@ class DynamicSettingsPageServiceProvider extends PluginServiceProvider
             ->hasViews();
     }
 
-    protected  function getPages(): array
+    protected function getPages(): array
     {
         return [
-            Setting::class
+            SettingPage::class
         ];
     }
 }
