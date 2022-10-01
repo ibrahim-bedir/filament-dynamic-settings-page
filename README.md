@@ -1,13 +1,9 @@
-
-## Ekran Görüntüleri
-
-![Uygulama Ekran Görüntüsü](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Package Overview](https://banners.beyondco.de/Filament%20Dynamic%20Settings%20Page%20Plugin.png?theme=light&packageManager=composer+require&packageName=ibrahim-bedir%2Ffilament-dynamic-settings-page&pattern=architect&style=style_1&description=Save+your+settings+quickly+and+simply.&md=1&showWatermark=0&fontSize=75px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
 
   
 # Filament Dynamic Settings Page Plugin
 
-save your settings quickly and simply.
-
+Save your settings quickly and simply.
 
 
 
@@ -16,7 +12,7 @@ save your settings quickly and simply.
 You can install the package via composer:
 
 ```bash
-  composer require ibrahim-bedir/filament-dynamic-settings-page
+composer require ibrahim-bedir/filament-dynamic-settings-page
 ```
 
   ## Usage
@@ -27,20 +23,21 @@ Just install the package and you're ready to go!
 You can publish the config file and migrations with:
 
 ```bash
-  php artisan filament-dynamic-settings-page:install
+php artisan filament-dynamic-settings-page:install
 ```
 
   This is the contents of the published config file:
 
-```bash
-  <?php
-    return [
-        'navigation' => [
-            'group' => 'Settings',
-            'sort' => '1',
-            'icon' => 'heroicon-o-cog'
-        ]
-    ];
+```php
+<?php
+
+return [
+    'navigation' => [
+        'group' => 'Settings',
+        'sort' => '1',
+        'icon' => 'heroicon-o-cog'
+    ]
+];
 ```
 ## Lisans
 
