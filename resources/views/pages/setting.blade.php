@@ -32,9 +32,9 @@
     <div class="grid md:grid-cols-4 grid-cols-1 w-full gap-3">
         @foreach ($tabs as $key => $group)
             <button wire:key="{{ $key }}" wire:click="selectedTab('{{ $group }}')"
-                class="@if ($activeTab === $group) bg-gray-200 dark:bg-gray-500 @endif flex bg-white hover:bg-gray-100 dark:bg-gray-800 border my-2 items-center focus:outline-none">
+                class="@if ($activeTab === $group) bg-gray-200 dark:bg-gray-700 border-gray-700 @endif flex bg-white hover:bg-gray-100 dark:bg-gray-800 border my-2 items-center focus:outline-none">
                 <div
-                    class="flex items-center justify-center w-5 h-14 ml-4 @if ($activeTab === $group) !bg-white dark:bg-gray-800 @endif bg-transparent font-semibold text-black">
+                    class="flex items-center justify-center w-5 h-14 ml-4 @if ($activeTab === $group) !bg-white dark:bg-transparent @endif bg-transparent font-semibold text-black">
                     {{ ++$key }}</div>
                 <div class="flex items-center h-full pl-4">
                     <span class="text-base font-semibold">{{ $group }}</span>
