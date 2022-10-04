@@ -32,10 +32,15 @@ php artisan filament-dynamic-settings-page:install
 <?php
 
 return [
+    'title' => 'Settings',
     'navigation' => [
+        'label' => 'Settings',
         'group' => 'Settings',
         'sort' => '1',
         'icon' => 'heroicon-o-cog'
+    ],
+    'breadcrumbs' => [
+        'Settings',
     ],
     'tool' => [
         "enable" => false
