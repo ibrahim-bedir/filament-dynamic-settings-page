@@ -1,5 +1,7 @@
 ![Package Overview](https://banners.beyondco.de/Filament%20Dynamic%20Settings%20Page%20Plugin.png?theme=light&packageManager=composer+require&packageName=ibrahim-bedir%2Ffilament-dynamic-settings-page&pattern=architect&style=style_1&description=Save+your+settings+quickly+and+simply.&md=1&showWatermark=0&fontSize=75px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
 
+
+<img width="70%" src="https://raw.githubusercontent.com/ibrahim-bedir/filament-dynamic-settings-page/main/screenshoot/screenshoot.gif"/>
   
 # Filament Dynamic Settings Page Plugin
 
