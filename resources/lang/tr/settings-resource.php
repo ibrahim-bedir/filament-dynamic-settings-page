@@ -1,11 +1,5 @@
 <?php
 return [
-    'navigation.label' => 'Ayarlar',
-    // breadrumbs return array
-    'breadcrumbs' => [
-        'Ayarlar',
-    ],
-    'title' => 'Ayarlar',
     'add.button' => 'Ekle',
     'save.button' => 'Kaydet',
     'fields' => [

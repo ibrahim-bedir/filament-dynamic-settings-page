@@ -1,10 +1,5 @@
 <?php
 return [
-    'navigation.label' => 'Settings',
-    'breadcrumbs' => [
-        'Settings',
-    ],
-    'title' => 'Settings',
     'add.button' => 'Add',
     'save.button' => 'Save',
     'fields' => [

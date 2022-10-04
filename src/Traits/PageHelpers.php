@@ -1,4 +1,5 @@
 <?php
+
 namespace IbrahimBedir\FilamentDynamicSettingsPage\Traits;
 
 use Filament\Notifications\Notification;
@@ -109,7 +110,7 @@ trait PageHelpers
      */
     protected static function getNavigationLabel(): string
     {
-        return __('filament-dynamic-settings-page::settings-resource.navigation.label');
+        return config('filament-dynamic-settings-page.navigation.label');
     }
 
     /**
@@ -117,7 +118,7 @@ trait PageHelpers
      */
     protected function getTitle(): string
     {
-        return __('filament-dynamic-settings-page::settings-resource.title');
+        return config('filament-dynamic-settings-page.title');
     }
 
     /**
@@ -125,6 +126,6 @@ trait PageHelpers
      */
     protected function getBreadcrumbs(): array
     {
-        return __('filament-dynamic-settings-page::settings-resource.breadcrumbs');
+        return config('filament-dynamic-settings-page.breadcrumbs');
     }
 }
