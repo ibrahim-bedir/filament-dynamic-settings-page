@@ -12,7 +12,7 @@ return [
         'Settings',
     ],
     'tool' => [
-        "enable" => false
+        "enable" => true
     ],
     'permission' => [
         'enable' => false,
