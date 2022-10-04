@@ -106,6 +106,13 @@ welcome.blade.php
 </html>
 ```
 
+## Things to do list
+
+- more fields
+- fields options
+- page authorize
+
+
 ## Lisans
 
 The MIT License [MIT](https://choosealicense.com/licenses/mit/). Please see License File for more information.
