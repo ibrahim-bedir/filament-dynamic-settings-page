@@ -42,6 +42,70 @@ return [
     ]
 ];
 ```
+
+easily accessible from the front:
+
+add app/helpers.php
+
+```php
+<?php
+
+use IbrahimBedir\FilamentDynamicSettingsPage\Models\Setting;
+
+function setting($key)
+{
+    return Setting::where('key', $key)->first()->value('value');
+}
+```
+
+composer.json
+```php
+...
+
+"autoload": {
+
+    "psr-4": {
+
+        "App\\": "app/",
+
+        "Database\\Factories\\": "database/factories/",
+
+        "Database\\Seeders\\": "database/seeders/"
+
+    },
+
+    "files": [
+
+        "app/helpers.php"
+
+    ]
+
+},
+
+...
+```
+
+```php
+    composer dump-autoload
+```
+welcome.blade.php
+
+```html
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Laravel</title>
+    </head>
+    <body class="antialiased">
+
+        {{ setting('site.title') }}
+
+    </body>
+</html>
+```
+
 ## Lisans
 
 The MIT License [MIT](https://choosealicense.com/licenses/mit/). Please see License File for more information.
