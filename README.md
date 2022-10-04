@@ -37,8 +37,12 @@ return [
         'sort' => '1',
         'icon' => 'heroicon-o-cog'
     ],
-    'tool'=>[
-        "enable"=> true
+    'tool' => [
+        "enable" => false
+    ],
+    'permission' => [
+        'enable' => true,
+        'name' => 'list.setting'
     ]
 ];
 ```
@@ -110,8 +114,6 @@ welcome.blade.php
 
 - more fields
 - fields options
-- page authorize
-
 
 ## Lisans
 
