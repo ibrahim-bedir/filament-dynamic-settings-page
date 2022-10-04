@@ -110,8 +110,6 @@ welcome.blade.php
 
 - more fields
 - fields options
-- page authorize
-
 
 ## Lisans
 
