@@ -10,7 +10,9 @@ return [
         "enable" => false
     ],
     'permission' => [
-        'enable' => true,
-        'name' => 'list.setting'
+        'enable' => false,
+        //  permission name 
+        // 'name' => 'list.settings'
+        'name' => ''
     ]
 ];
