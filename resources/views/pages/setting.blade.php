@@ -46,11 +46,11 @@
         @if ($activeTab === $group)
             <div wire:key="{{ $group }}"
                 class="filament-forms-card-component p-6 bg-white rounded-xl border border-gray-300 dark:border-gray-600 dark:bg-gray-800">
-                <h2 class="text-xl mb-5 font-bold">{{ $group }}</h2>
+                <h2 class="text-xl font-bold">{{ $group }}</h2>
                 <div id="sortable">
                     @foreach ($items as $key => $item)
                         <div wire:key="{{ $group . $key }}" data-id="{{ $item['id'] }}"
-                            class="flex flex-col mb-5 list-setting mt-5">
+                            class="flex flex-col list-setting mt-2 mb-2 gap-2">
                             <label
                                 class="text-sm font-medium leading-4 text-gray-700 dark:text-gray-300 mb-2 flex justify-between items-center">
                                 <div class="flex items-center">
@@ -63,7 +63,7 @@
                                 <button wire:loading.attr="disabled" wire:loading.class="!bg-primary-200"
                                     wire:target="destroySetting">
                                     <x-heroicon-o-trash
-                                        onclick="return confirm('Kaydı silmek istediğinize emin misiniz?') ? @this.destroySetting({{ $item['id'] }}) : false"
+                                        onclick="return confirm('{{ __('filament-dynamic-settings-page::settings-resource.delete.confirm') }}') ? Livewire.emit('destroySetting',{{ $item['id'] }}) : false"
                                         class="w-5 h-5 hover:text-danger-500 cursor-pointer" />
                                 </button>
                                 @endif
@@ -76,7 +76,7 @@
                     @endforeach
                 </div>
                 <button wire:loading.attr="disabled" wire:loading.class="!bg-primary-200" wire:target="save"
-                    wire:click="save" class="{{ $buttonClass }} mt-5">
+                    wire:click="save" class="{{ $buttonClass }} mt-2 mb-2">
                     {{ __('filament-dynamic-settings-page::settings-resource.save.button') }}
                 </button>
             </div>
@@ -85,7 +85,7 @@
     @if(config('filament-dynamic-settings-page.tool.enable'))
     <div
         class="filament-forms-card-component p-6 bg-white rounded-xl border border-gray-300 dark:border-gray-600 dark:bg-gray-800">
-        <h2 class="text-xl mb-5 font-bold">
+        <h2 class="text-xl font-bold">
             {{ __('filament-dynamic-settings-page::settings-resource.fields.card-header') }}</h2>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
             <input wire:model.lazy="newSetting.display_name" type="text"
@@ -120,7 +120,7 @@
         </div>
         <div align="right">
             <button wire:loading.attr="disabled" wire:loading.class="!bg-primary-200" wire:target="saveNewSetting"
-                wire:click="saveNewSetting" class="mt-2 {{ $buttonClass }}">
+                wire:click="saveNewSetting" class="mt-2 mb-2 {{ $buttonClass }}">
                 {{ __('filament-dynamic-settings-page::settings-resource.add.button') }}
             </button>
         </div>
@@ -142,7 +142,7 @@
                     $('.list-setting').each(function(ind, el) {
                         order[$(this).data('id')] = $(this).index();
                     });
-                    @this.order(order);
+                    Livewire.emit('order', order)
                 }
             });
         }
@@ -150,7 +150,7 @@
             initSelect2()
 
             $("#multiple").on("change", function(e) {
-                @this.changeGroup(e.target.value)
+                Livewire.emit('changeGroup', e.target.value)
             });
 
             setSortable();

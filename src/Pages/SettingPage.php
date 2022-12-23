@@ -30,6 +30,13 @@ class SettingPage extends Page
     public $activeTab;
     public $newSetting = [];
 
+    public $listeners = [
+        'changeGroup' => 'changeGroup',
+        'order' => 'order',
+        'destroySetting' => 'destroySetting',
+
+    ];
+
     protected static function shouldRegisterNavigation(): bool
     {
         if (config('filament-dynamic-settings-page.permission.enable')) {
@@ -60,18 +67,6 @@ class SettingPage extends Page
         })->toArray();
         $this->form = $settingGroups->keyBy('id')->toArray();
         $this->activeTab = $this->activeTab ?? collect($this->tabs)->first();
-    }
-
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                Card::make()
-                    ->schema([
-                        TextInput::make('name')
-                            ->label('Kullanıcı Adı'),
-                    ])
-            ]);
     }
 
     /**

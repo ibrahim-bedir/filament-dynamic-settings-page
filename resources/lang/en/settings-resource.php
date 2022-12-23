@@ -2,6 +2,7 @@
 return [
     'add.button' => 'Add',
     'save.button' => 'Save',
+    'delete.confirm' => 'Are you sure you want to delete the recording?',
     'fields' => [
         'card-header' => 'Add Field',
         'name' => 'Field Name - ex: Site Title',
@@ -18,5 +19,6 @@ return [
         'saved' => 'Saved.',
         'order-sort' => 'Sort Successful.',
         'deleted' => 'Deleted.'
-    ]
+    ],
+    'preview' => 'Preview',
 ];
