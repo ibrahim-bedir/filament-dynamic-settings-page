@@ -41,7 +41,9 @@ trait PageHelpers
             Storage::disk('public')->delete($setting->value);
         }
 
-        return $file->store('uploads/settings', 'public');
+        //return $file->store('uploads/settings', 'public');
+        return $file->store('uploads/'.config('filament-dynamic-settings-page.navigation.folder'),'public');
+
     }
 
     /**
