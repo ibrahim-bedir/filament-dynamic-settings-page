@@ -6,7 +6,8 @@ return [
         'label' => 'Settings',
         'group' => 'Settings',
         'sort' => '1',
-        'icon' => 'heroicon-o-cog'
+        'icon' => 'heroicon-o-cog',
+        'folder' => 'site'
     ],
     'breadcrumbs' => [
         'Settings',
