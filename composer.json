@@ -16,7 +16,7 @@
     "require": {
         "php": "^8.0",
         "filament/filament": "^2.12",
-        "laravel/framework": "^9.1"
+        "laravel/framework": "^10"
     },
     "autoload": {
         "psr-4": {
